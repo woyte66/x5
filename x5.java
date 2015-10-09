@@ -65,6 +65,10 @@ void table( float left, float top, float right, float bottom ) {
 void bounce() {
   redX += redDX;  if ( redX<left || redX>right ) redDX *= -1;
   redY += redDY;  if ( redY<top || redY>bottom ) redDY *=  -1;
+
+  yelX += yelDX;  if ( yelX<left || yelX>right ) yelDX *= -1;
+  yelY += yelDY;  if ( yelY<top || yelY>bottom ) yelDY *=  -1;
+
 }
 void collisions() {
   float tmp;
@@ -97,4 +101,3 @@ void keyPressed() {
     reset();
   }
 }
-
