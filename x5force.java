@@ -3,7 +3,7 @@
 
 //// GLOBALS:  pool table, 3 colored balls
 
-String title=  "ELASTIC COLLISIONS  (x5day.java)";
+String title=  "ELASTIC COLLISIONS  (x5force.java)";
 String help=   "Click to shoot crystal ball. \n 'r' key to reset, 'q to quit.";
 String news=help;
 String author=  "Luke Skywalker";
