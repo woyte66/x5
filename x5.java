@@ -1,4 +1,4 @@
-//// X5:  collisions.
+//// X5:  collisions.  
 //// (Assume ball diameter of 30.)
 
 //// GLOBALS:  pool table, 3 colored balls
