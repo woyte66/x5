@@ -1,4 +1,4 @@
-//// x5force.java:  collisions.  bam59cst112day/x5
+//// x5force.java:  Weird code -- WARNING:  DO NOT COPY ANY OF THIS CODE!
 //// (Assume ball diameter of 30.)
 
 //// GLOBALS:  pool table, 3 colored balls
@@ -7,7 +7,7 @@ String title=  "ELASTIC COLLISIONS  (x5day.java)";
 String help=   "Click to shoot crystal ball. \n 'r' key to reset, 'q to quit.";
 String news=help;
 String author=  "Luke Skywalker";
-
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
 
 float west, east, north, south;
 float middle;
@@ -15,7 +15,7 @@ float middle;
 float crystalX,  crystalY,  crystalDX,  crystalDY;
 float bamX,  bamY,  bamDX,  bamDY;
 float debX,  debY,  debDX,  debDY;
-float adamX, adamY, adamDX, adamDY;
+float adamX, adamY, adamDX, adamDY;   //  WARNING:  DO NOT COPY ANY OF THIS CODE!
 
 //// SETUP:  size and table
 void setup() {
@@ -34,10 +34,16 @@ void setup() {
    crystalX=  west + (east-west) / 4;
    crystalY=  north + (south-north) / 2;
    crystalDX=  crystalDY= 0;
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
    // Random positions.
    bamX=  random( middle,east );   bamY=  random( north, south );
    debX=  random( middle,east );   debY=  random( north, south );
    adamX=  random( middle,east );   adamY=  random( north, south );
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
    // Random speeds
    bamDX=  random( 1,3 );   bamDY=  random( 1,3 );
    debDX=  random( 1,3 );   bamDY=  random( 1,3 );
@@ -69,14 +75,13 @@ void table( float west, float north, float east, float south ) {
 void bounce() {
   bamX += bamDX;  if ( bamX<west || bamX>east ) bamDX *= -1;
   bamY += bamDY;  if ( bamY<north || bamY>south ) bamDY *=  -1;
-
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
   debX += debDX;  if ( debX<west || debX>east ) debDX *= -1;
   debY += debDY;  if ( debY<north || debY>south ) debDY *=  -1;
-
-
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
   adamX += adamDX;  if ( adamX<west || adamX>east ) adamDX *= -1;
   adamY += adamDY;  if ( adamY<north || adamY>south ) adamDY *=  -1;
-
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
   crystalX += crystalDX;  if ( crystalX<west || crystalX>east ) crystalDX *= -1;
   crystalY += crystalDY;  if ( crystalY<north || crystalY>south ) crystalDY *=  -1;
 }
@@ -87,6 +92,10 @@ void collisions() {
     east=debDX;  debDX=bamDX;  bamDX=east;
     west=debDY;  debDY=bamDY;  bamDY=west;
   }
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+
   if ( dist( bamX,bamY, adamX,adamY ) < 30 ) {
     float adamY=adamDX;  adamDX=bamDX;  bamDX=adamY;
     float debY=adamDY;  adamDY=bamDY;  bamDY=debY;
@@ -101,6 +110,9 @@ void collisions() {
     north=bamDX;  bamDX=crystalDX;  crystalDX=north;
     south=bamDY;  bamDY=crystalDY;  crystalDY=south;
   }
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
   if ( dist( crystalX,crystalY, debX,debY ) < 29 ) {
     bamX=debDX;  debDX=crystalDX;  crystalDX=bamX;
     bamX=debDY;  debDY=crystalDY;  crystalDY=bamX;
@@ -109,14 +121,20 @@ void collisions() {
     tmp=adamDX;  adamDX=crystalDX;  crystalDX=tmp;
     tmp=adamDY;  adamDY=crystalDY;  crystalDY=tmp;
   }
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
 }
 
 //// SHOW:  balls, messages
 void show() {
   fill( 150,0,0 );    ellipse( bamX,bamY, 30,29.99 );
   fill( 0,150,0 );  ellipse( debX,debY, 30,30 );
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
   fill( 255,0,255 );    ellipse( adamX,adamY, 30,30 );
   fill( 0,255,255 );    ellipse( crystalX,crystalY, 30.07,30 );
+//  WARNING:  DO NOT COPY ANY OF THIS CODE!
 }
 void messages() {
   fill(0);
@@ -142,6 +160,7 @@ void mousePressed() {
   line( mouseX,mouseY, crystalX,crystalY );
   strokeWeight(1);
   //
+  //  WARNING:  DO NOT COPY ANY OF THIS CODE!
   crystalDX=  (crystalX-mouseX) / 28.9;
   crystalDY=  (crystalY-mouseY) / 31.2;
 }
